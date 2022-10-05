@@ -76,7 +76,6 @@
 }
 
 .airtel-logo img {
-    margin-top: 3px;
     width: 95px;
 }
 
@@ -425,10 +424,6 @@ button:hover {
         height: 55px;
     }
 
-    .airtel-logo img {
-        margin-top: 0px;
-    }
-
     .nav-1-container {
         display: none;
     }
@@ -443,6 +438,10 @@ button:hover {
 
     .airtel-logo img:first-child {
         display: block;
+    }
+
+    .airtel-logo img:first-child:hover {
+        cursor: pointer;
     }
 
     .nav-2-container {
@@ -546,7 +545,7 @@ button:hover {
     }
 
     .swiper-pagination-bullet {
-        width: 50px !important;
+        width: 47px !important;
         margin: 0px 7px !important;
     }
 }
@@ -560,12 +559,6 @@ button:hover {
     /* ===== BANNER ===== */
     .swiper-slide img {
         height: 8em;
-    }
-
-    .swiper-pagination-bullet {
-        height: 3px !important;
-        width: 50px !important;
-        margin: 0px 7px !important;
     }
 }
 
@@ -584,10 +577,118 @@ button:hover {
     .swiper-slide img {
         height: 6.75em;
     }
+}
 
-    .swiper-pagination-bullet {
-        height: 3px !important;
-        width: 50px !important;
-        margin: 0px 7px !important;
-    }
+/* ===== RESPONSIVE SIDEBAR ===== */
+/* ===== RESPONSIVE SIDEBAR ===== */
+
+.res-alpha-bg {
+    display: none;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+}
+
+.res-ul {
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    width: 75%;
+    height: 75%;
+    overflow: scroll;
+    background-color: white;
+    margin-left: -75%;
+    transition: .3s;
+}
+
+.res-ul li div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    color: rgb(85, 85, 85);
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.res-ul svg {
+    width: 13px;
+    transform: none;
+    transition: 0.3s;
+}
+
+.res-hidden-ul {
+    list-style: none;
+    max-height: 0px;
+    overflow: hidden;
+    transition: .3s;
+}
+
+.res-hidden-ul li {
+    padding: 10px 30px;
+}
+
+.res-hidden-ul a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.res-hidden-ul li:hover {
+    cursor: pointer;
+    background-color: #f1f1f1;
+}
+
+.res-hidden-ul li:hover a {
+    color: #dd0000;
+}
+
+.res-bottom {
+    position: absolute;
+    bottom: 0;
+    z-index: 2;
+    background-color: white;
+    width: 75%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -75%;
+    transition: .3s;
+}
+
+.res-bottom button {
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 10px 90px;
+    border-radius: 5px;
+    background-color: #e5e5e5;
+}
+
+.res-ul-bottom {
+    list-style: none;
+    display: flex;
+}
+
+.res-ul-bottom a {
+    text-decoration: none;
+    color: #555555;
+    font-size: 11px;
+    font-weight: 500;
+    margin: 0px 7px;
+}
+
+.res-red-bottom {
+    width: 100%;
+    height: 5px;
+    background-color: #dd0000;
 }
